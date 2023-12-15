@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomBreakDown">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:background="#F0F8FF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#2196F3">
+
+            <ImageButton
+                android:id="@+id/cb_back"
+                android:layout_width="44dp"
+                android:layout_height="51dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_baseline_beach_access_24"
+                android:background="#2196F3"/>
+
+            <TextView
+                android:id="@+id/cb_title"
+                android:layout_width="354dp"
+                android:layout_height="wrap_content"
+                android:background="#2196F3"
+                android:fontFamily="sans-serif-medium"
+                android:padding="16dp"
+                android:text="Custom Breakdown"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F0F8FF"
+            app:layout_constraintTop_toBottomOf="@+id/eb_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioGroup
+                android:id="@+id/cb_radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/cb_radiopercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="By Percentage (%)"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <RadioButton
+                    android:id="@+id/cb_radioratio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="By Ratio"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <RadioButton
+                    android:id="@+id/cb_radioamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="By Amount(RM)"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/cb_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="362dp"
+            android:background="#F0F8FF"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/cb_llscroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="top|center_horizontal"
+            android:paddingTop="16dp">
+
+            <Button
+                android:id="@+id/eb_savefriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Friend"
+                android:background="#2196F3"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"/>
+
+            <Button
+                android:id="@+id/eb_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_marginLeft="20dp"
+                android:background="#2196F3"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

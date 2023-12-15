@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EqualBreakDown">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:background="#F0F8FF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#2196F3">
+
+            <ImageButton
+                android:id="@+id/eb_back"
+                android:layout_width="44dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="#2196F3"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_baseline_beach_access_24" />
+
+            <TextView
+                android:id="@+id/eb_title"
+                android:layout_width="354dp"
+                android:layout_height="wrap_content"
+                android:background="#2196F3"
+                android:fontFamily="sans-serif-medium"
+                android:padding="16dp"
+                android:text="Combination BreakDown"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="447dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp">
+
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="top|center_horizontal"
+            android:paddingTop="16dp">
+
+            <Button
+                android:id="@+id/eb_savefriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Friend"
+                android:background="#2196F3"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginRight="20dp"/>
+
+            <Button
+                android:id="@+id/eb_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_marginLeft="20dp"
+                android:background="#2196F3"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

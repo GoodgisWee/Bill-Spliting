@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".History">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/eb_back"
+                android:layout_width="44dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="#2196F3"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/ic_baseline_beach_access_24" />
+
+            <TextView
+                android:id="@+id/eb_title"
+                android:layout_width="354dp"
+                android:layout_height="wrap_content"
+                android:background="#2196F3"
+                android:fontFamily="sans-serif-medium"
+                android:padding="16dp"
+                android:text="History"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/mp_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- First button -->
+            <Button
+                android:id="@+id/expenseBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Expense"
+                android:background="#2196F3"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Second button -->
+            <Button
+                android:id="@+id/friendBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Friends"
+                android:background="#2196F3"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="8dp"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="#F5F5F5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"/>
+                <TextView
+                    android:id="@+id/listContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
